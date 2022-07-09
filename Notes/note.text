@@ -1,0 +1,138 @@
+
+ref and forwardRef
+
+https://codesandbox.io/s/zealous-fog-x8sjij?file=/src/components/inputs.js
+
+https://app.diagrams.net/
+https://www.draw.io
+
+https://lucid.app/lucidspark/1df8fa9c-a418-4cae-8462-1a5fe494a17a/edit?invitationId=inv_8fabacfa-ca5a-4467-967f-b6455f19c459#
+
+
+
+debounce and folder with recursion
+
+https://codesandbox.io/s/jovial-benz-6xxzzc?file=/src/App.js
+
+
+oops
+
+https://github.com/iamshaunjp/object-oriented-js/blob
+
+
+
+TCS Interview Questions
+
+https://codesandbox.io/s/sweet-wilbur-uut9wq?file=/src/App.js
+
+https://portal1.passportindia.gov.in/AppOnlineProject/user/userLogin
+
+HOW react works
+https://www.youtube.com/watch?v=7YhdqIR2Yzo&list=PLxRVWC-K96b0ktvhd16l3xA6gncuGP7gJ 
+/////////////////////////////////////////////////////////////////////////
+//What is the output for :
+
+let a = 1;
+
+const func = () => {
+ a =2;
+ console.log(a);
+}
+
+console.log(a);
+func();
+
+// Ans : 1,2
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+//What is the output for :
+
+let person = {
+  name : “John”
+};
+
+const newPerson = person;
+
+newPerson.name = “Mark”
+
+console.log(person.name);
+
+
+// Ans : Mark
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+//What is the output for :
+
+const func1 = () => {
+ const a = 1;
+ return () => {
+ console.log(a);
+}
+}
+
+func1()();
+
+// Ans : 1
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+//What is the output for :
+
+console.log(a)
+
+console.log(func());
+
+console.log(func2());
+
+var a = 1;
+
+function func() {
+ return 2
+}
+
+var func2 = () => {
+ return 2
+}
+
+// Ans : undefined 2 Uncaught TypeError: func2 is not a function
+/////////////////////////////////////////////////////////////////////////
+//Write JS Code for the following:
+
+// Create a function named sorter which accepts 2 arguments  
+        // 1.  Array of names
+       // 2.  sort type - “asc” or “dsc”
+// Write the logic such that the array of names get sorted based on the sort type given
+// You can use the any inbuilt methods 
+
+
+const sorter=(arr,type)=>{
+return arr.sort((a,b)=>{
+if(type==="asc") {
+return b-a
+}else{
+if(type==="dsc") {
+return a-b
+}
+}
+
+})
+}
+const array=["shiv","David","Ram","Yadav"];
+const type="asc"
+
+console.log(sorter(array,type))
+
+/////////////////////////////////////////////////////////////////////////
+//What is the output for :
+
+console.log(“1”);
+
+setTimeout(() => console.log(“2”),1);
+
+Promise.resolve(“3”).then(res => console.log(res));
+
+console.log(“4”)
+
+// Ans : 1,4,3,2
+/////////////////////////////////////////////////////////////////////////
+
+
