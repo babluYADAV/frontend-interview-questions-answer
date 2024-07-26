@@ -1,5 +1,5 @@
 
-function memoize() {
+function memoize(fn) {
     let res = {};
     return function (...args) {
       let resCache = JSON.stringify(args);
