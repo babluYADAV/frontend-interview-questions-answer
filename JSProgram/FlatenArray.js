@@ -7,12 +7,16 @@ const arr = [
 const flatenArray=(arr,depth=1)=>{
     let results=[];
     arr.forEach(ar => { 
-        if(Array.isArray(ar) && depth>0){
-            results.push(...flatenArray(ar,depth-1))
+        debugger
+        if(Array.isArray(ar) ){
+                 debugger
+            results.push(...flatenArray(ar))
         }else{
             results.push(ar)
+                 debugger
         }
     });
+         debugger
     return results
 }
 

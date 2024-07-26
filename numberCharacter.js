@@ -22,5 +22,5 @@ const maxChar = (str) => {
   }
   console.log(maximumChar + ":" + maxNum);
 };
-
+// let str = "shivram yadav";
 maxChar(str);

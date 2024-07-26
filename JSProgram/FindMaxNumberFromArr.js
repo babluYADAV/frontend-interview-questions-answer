@@ -10,6 +10,6 @@ const findMax = (arr) => {
     }
   }
 
-  return arr[len - 1];
+  return [arr[len - 1],arr];
 };
 console.log(findMax(array));

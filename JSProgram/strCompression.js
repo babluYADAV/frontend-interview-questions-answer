@@ -37,3 +37,25 @@ const coutner = (string) => {
 };
 
 console.log(coutner("aaabbbccacdb")); //a3b3c3d3a1c1d1b1
+
+
+function compressString(s) {
+  let result = '';
+  let count = 1;
+
+  for (let i = 0; i < s.length; i++) {
+      if (s[i] === s[i + 1]) {
+          count++;
+      } else {
+          result += s[i] + count;
+          count = 1;
+      }
+  }
+
+  return result;
+}
+
+// Example usage
+const input = "aaabbbcccdddacdb";
+const output = compressString(input);
+console.log("Output:", output); // Output: "a3b3c3d3a1c1d1b1"
