@@ -1,4 +1,4 @@
-let str = "shivram yadav";
+let str = 'shivram yadav';
 let histogram = {};
 let len = str.length;
 for (let i = 0; i < len; i++) {
@@ -11,16 +11,15 @@ console.log(histogram);
 const maxChar = (str) => {
   let obj = {};
   for (let char of str) !obj[char] ? (obj[char] = 1) : obj[char]++;
-  console.log(obj);
   let maxNum = 0;
-  let maximumChar = "";
+  let maximumChar = '';
   for (let char of str) {
     if (obj[char] >= maxNum) {
       maxNum = obj[char];
       maximumChar = char;
     }
   }
-  console.log(maximumChar + ":" + maxNum);
+  console.log(maximumChar + ':' + maxNum);
 };
 // let str = "shivram yadav";
 maxChar(str);

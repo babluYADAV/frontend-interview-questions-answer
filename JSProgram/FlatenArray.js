@@ -4,25 +4,19 @@ const arr = [
 ];
 
 //custom method
-const flatenArray=(arr,depth=1)=>{
-    let results=[];
-    arr.forEach(ar => { 
-        debugger
-        if(Array.isArray(ar) ){
-                 debugger
-            results.push(...flatenArray(ar))
-        }else{
-            results.push(ar)
-                 debugger
-        }
-    });
-         debugger
-    return results
-}
+const flatenArray = (arr, depth = 1) => {
+  let results = [];
+  arr.forEach((ar) => {
+    if (Array.isArray(ar)) {
+      results.push(...flatenArray(ar, depth));
+    } else {
+      results.push(ar);
+    }
+  });
 
-console.log(flatenArray(arr,3));
+  return results;
+};
 
+console.log(flatenArray(arr, 3));
 
-console.log(arr.flat(3))
-
-
+console.log(arr.flat(3));

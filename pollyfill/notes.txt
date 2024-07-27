@@ -1,2 +1,2 @@
-A polyfill is apiece of code (usually javascript on the web) used to provide modern functionality
+A polyfill is a piece of code (usually javascript on the web) used to provide modern functionality
 on older web browsers that do not natively support it.
