@@ -1,12 +1,15 @@
 
 function memoize(fn) {
-    let res = {};
+    let cache = {};
     return function (...args) {
-      let resCache = JSON.stringify(args);
-      if (!res[resCache]) {
-        res[resCache] = fn.apply(this, args);
+      let cacheKey = JSON.stringify(args);
+      if(cacheKey in cache){
+        console.log('from cache')
+        return cache[cacheKey]
       }
-      return res[resCache];
+      cache[cacheKey] = fn.apply(this, args);
+      console.log('first time ')
+      return cache[cacheKey];
     };
   }
   
@@ -16,4 +19,4 @@ function memoize(fn) {
   };
   const memoizeProduct = memoize(clumsyproduct);
   
-  memoizeProduct(1, 2);
+  memoizeProduct(1, 2);zzzzzazx 

@@ -14,3 +14,4 @@ Array.prototype.myReduce = function (callback, initialValue = 0) {
 const sum = arr.myReduce((prevValue, currentValue) => prevValue + currentValue);
 
 console.log(sum);
+   

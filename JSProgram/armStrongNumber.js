@@ -38,7 +38,7 @@ const arm = (n) => {
   let sum = 0;
   let len = n.toString().length;
   while (temp > 0) {
-    let digit = digit % 10;
+    let digit = temp % 10;
     sum += digit ** len;
     temp = parseInt(temp / 10);
   }

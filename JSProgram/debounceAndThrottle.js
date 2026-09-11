@@ -8,6 +8,16 @@ console.log('fetching', count++)
 }
 
 
+// function debounceFN(fn,d){
+// let timer;
+// return function(...args){
+// clearTimeout(timer)
+// timer=setTimeout(()=>{
+// fn(...args)
+// },d)
+// }
+// }
+
 function debounceFN(fn,d){
 let timer;
 return function(){
@@ -35,13 +45,13 @@ const args=arguments;
 if(flag){
 func.apply(this,args); flag=false;
 
-}
+
 setTimeout(()=>{
 flag=true;
 },limit)
 
 
-
+}
 }
 
 }
